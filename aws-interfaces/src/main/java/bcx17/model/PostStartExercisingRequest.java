@@ -5,16 +5,14 @@ package bcx17.model;
 
 import java.io.Serializable;
 import javax.annotation.Generated;
-import com.amazonaws.protocol.StructuredPojo;
-import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * 
- * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/Empty" target="_top">AWS API
- *      Documentation</a>
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/PostStartExercising"
+ *      target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class Empty implements Serializable, Cloneable, StructuredPojo {
+public class PostStartExercisingRequest extends com.amazonaws.opensdk.BaseRequest implements Serializable, Cloneable {
 
     /**
      * Returns a string representation of this object; useful for testing and debugging.
@@ -38,9 +36,9 @@ public class Empty implements Serializable, Cloneable, StructuredPojo {
         if (obj == null)
             return false;
 
-        if (obj instanceof Empty == false)
+        if (obj instanceof PostStartExercisingRequest == false)
             return false;
-        Empty other = (Empty) obj;
+        PostStartExercisingRequest other = (PostStartExercisingRequest) obj;
         return true;
     }
 
@@ -53,17 +51,20 @@ public class Empty implements Serializable, Cloneable, StructuredPojo {
     }
 
     @Override
-    public Empty clone() {
-        try {
-            return (Empty) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new IllegalStateException("Got a CloneNotSupportedException from Object.clone() " + "even though we're Cloneable!", e);
-        }
+    public PostStartExercisingRequest clone() {
+        return (PostStartExercisingRequest) super.clone();
     }
 
-    @com.amazonaws.annotation.SdkInternalApi
-    @Override
-    public void marshall(ProtocolMarshaller protocolMarshaller) {
-        bcx17.model.transform.EmptyMarshaller.getInstance().marshall(this, protocolMarshaller);
+    /**
+     * Set the configuration for this request.
+     *
+     * @param sdkRequestConfig
+     *        Request configuration.
+     * @return This object for method chaining.
+     */
+    public PostStartExercisingRequest sdkRequestConfig(com.amazonaws.opensdk.SdkRequestConfig sdkRequestConfig) {
+        super.sdkRequestConfig(sdkRequestConfig);
+        return this;
     }
+
 }

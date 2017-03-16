@@ -24,6 +24,11 @@ public class AbstractKneeBends implements KneeBends {
     }
 
     @Override
+    public PostStartExercisingResult postStartExercising(PostStartExercisingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -8,11 +8,11 @@ import javax.annotation.Generated;
 
 /**
  * 
- * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/PostPushupDetected"
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/PostStartExercising"
  *      target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class PostPushupDetectedResult extends com.amazonaws.opensdk.BaseResult implements Serializable, Cloneable {
+public class PostStartExercisingResult extends com.amazonaws.opensdk.BaseResult implements Serializable, Cloneable {
 
     private Empty empty;
 
@@ -37,7 +37,7 @@ public class PostPushupDetectedResult extends com.amazonaws.opensdk.BaseResult i
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public PostPushupDetectedResult empty(Empty empty) {
+    public PostStartExercisingResult empty(Empty empty) {
         setEmpty(empty);
         return this;
     }
@@ -66,9 +66,9 @@ public class PostPushupDetectedResult extends com.amazonaws.opensdk.BaseResult i
         if (obj == null)
             return false;
 
-        if (obj instanceof PostPushupDetectedResult == false)
+        if (obj instanceof PostStartExercisingResult == false)
             return false;
-        PostPushupDetectedResult other = (PostPushupDetectedResult) obj;
+        PostStartExercisingResult other = (PostStartExercisingResult) obj;
         if (other.getEmpty() == null ^ this.getEmpty() == null)
             return false;
         if (other.getEmpty() != null && other.getEmpty().equals(this.getEmpty()) == false)
@@ -86,9 +86,9 @@ public class PostPushupDetectedResult extends com.amazonaws.opensdk.BaseResult i
     }
 
     @Override
-    public PostPushupDetectedResult clone() {
+    public PostStartExercisingResult clone() {
         try {
-            return (PostPushupDetectedResult) super.clone();
+            return (PostStartExercisingResult) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new IllegalStateException("Got a CloneNotSupportedException from Object.clone() " + "even though we're Cloneable!", e);
         }

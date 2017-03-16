@@ -70,7 +70,7 @@ class KneeBendsClient implements KneeBends {
      * @param postPushupDetectedRequest
      * @return Result of the PostPushupDetected operation returned by the service.
      * @sample KneeBends.PostPushupDetected
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-15T17:53:25Z/PostPushupDetected"
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/PostPushupDetected"
      *      target="_top">AWS API Documentation</a>
      */
     @Override
@@ -83,6 +83,25 @@ class KneeBendsClient implements KneeBends {
         return clientHandler.execute(new ClientExecutionParams<PostPushupDetectedRequest, PostPushupDetectedResult>()
                 .withMarshaller(new PostPushupDetectedRequestProtocolMarshaller(protocolFactory)).withResponseHandler(responseHandler)
                 .withErrorResponseHandler(errorResponseHandler).withInput(postPushupDetectedRequest));
+    }
+
+    /**
+     * @param postStartExercisingRequest
+     * @return Result of the PostStartExercising operation returned by the service.
+     * @sample KneeBends.PostStartExercising
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/PostStartExercising"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PostStartExercisingResult postStartExercising(PostStartExercisingRequest postStartExercisingRequest) {
+        HttpResponseHandler<PostStartExercisingResult> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                .withPayloadJson(true).withHasStreamingSuccessResponse(false), new PostStartExercisingResultJsonUnmarshaller());
+
+        HttpResponseHandler<SdkBaseException> errorResponseHandler = createErrorResponseHandler();
+
+        return clientHandler.execute(new ClientExecutionParams<PostStartExercisingRequest, PostStartExercisingResult>()
+                .withMarshaller(new PostStartExercisingRequestProtocolMarshaller(protocolFactory)).withResponseHandler(responseHandler)
+                .withErrorResponseHandler(errorResponseHandler).withInput(postStartExercisingRequest));
     }
 
     /**

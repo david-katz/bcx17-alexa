@@ -22,10 +22,19 @@ public interface KneeBends {
      * @param postPushupDetectedRequest
      * @return Result of the PostPushupDetected operation returned by the service.
      * @sample KneeBends.PostPushupDetected
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-15T17:53:25Z/PostPushupDetected"
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/PostPushupDetected"
      *      target="_top">AWS API Documentation</a>
      */
     PostPushupDetectedResult postPushupDetected(PostPushupDetectedRequest postPushupDetectedRequest);
+
+    /**
+     * @param postStartExercisingRequest
+     * @return Result of the PostStartExercising operation returned by the service.
+     * @sample KneeBends.PostStartExercising
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/PostStartExercising"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PostStartExercisingResult postStartExercising(PostStartExercisingRequest postStartExercisingRequest);
 
     /**
      * @return Create new instance of builder with all defaults set.
