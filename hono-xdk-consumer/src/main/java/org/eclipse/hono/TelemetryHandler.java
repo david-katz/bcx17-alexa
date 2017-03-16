@@ -2,6 +2,9 @@ package org.eclipse.hono;
 
 import org.eclipse.hono.util.MessageHelper;
 
+import bcx17.KneeBends;
+import bcx17.KneeBendsClientBuilder;
+import bcx17.model.PostPushupDetectedRequest;
 import io.vertx.core.json.JsonObject;
 
 import org.apache.qpid.proton.amqp.messaging.AmqpValue;
@@ -23,7 +26,15 @@ public class TelemetryHandler {
 	double barometerDiff = 0;
 	double magnetometerHigh = 0;
 	double magnetometerLow = 0;
+	private KneeBends kneeBendsProxy;
 
+	public TelemetryHandler() {
+		KneeBendsClientBuilder builder = KneeBends.builder();
+		builder.setApiKey("64yHdLKCT77S0741RawXY4ZJ6tRtZsfz2cRgMABW");
+		builder.setEndpoint("https://efvp0jra7k.execute-api.eu-central-1.amazonaws.com/prod/pushupDetected");
+		kneeBendsProxy = builder.build();
+	}
+	
 	public void handleTelemetryMessage(final Message msg) {
 		final Section body = msg.getBody();
 		String content = null;
@@ -125,6 +136,9 @@ public class TelemetryHandler {
 			if(isArmsUp(sensorValue)) {
 				state = State.ARMS_UP;
 				System.out.println("HALF DONE");
+				PostPushupDetectedRequest pushupRequest = new PostPushupDetectedRequest();
+				pushupRequest.setFull("false");
+				kneeBendsProxy.postPushupDetected(pushupRequest);
 			} else if (isArmsDown(sensorValue)) {
 				state = State.ARMS_DOWN;
 			}
@@ -132,7 +146,9 @@ public class TelemetryHandler {
 		case ARMS_DOWN:
 			if(isArmsUp(sensorValue)) {
 				state = State.ARMS_UP;
-				System.out.println("WELL DONE");
+				PostPushupDetectedRequest pushupRequest = new PostPushupDetectedRequest();
+				pushupRequest.setFull("true");
+				kneeBendsProxy.postPushupDetected(pushupRequest);
 			}
 			break;
 		}
