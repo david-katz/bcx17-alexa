@@ -19,6 +19,16 @@ public class AbstractKneeBends implements KneeBends {
     }
 
     @Override
+    public DeleteTrainingResult deleteTraining(DeleteTrainingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetNumberOfPushupsCompletedResult getNumberOfPushupsCompleted(GetNumberOfPushupsCompletedRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public PostPushupDetectedResult postPushupDetected(PostPushupDetectedRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -67,10 +67,48 @@ class KneeBendsClient implements KneeBends {
     }
 
     /**
+     * @param deleteTrainingRequest
+     * @return Result of the DeleteTraining operation returned by the service.
+     * @sample KneeBends.DeleteTraining
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T11:24:08Z/DeleteTraining"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteTrainingResult deleteTraining(DeleteTrainingRequest deleteTrainingRequest) {
+        HttpResponseHandler<DeleteTrainingResult> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata().withPayloadJson(true)
+                .withHasStreamingSuccessResponse(false), new DeleteTrainingResultJsonUnmarshaller());
+
+        HttpResponseHandler<SdkBaseException> errorResponseHandler = createErrorResponseHandler();
+
+        return clientHandler.execute(new ClientExecutionParams<DeleteTrainingRequest, DeleteTrainingResult>()
+                .withMarshaller(new DeleteTrainingRequestProtocolMarshaller(protocolFactory)).withResponseHandler(responseHandler)
+                .withErrorResponseHandler(errorResponseHandler).withInput(deleteTrainingRequest));
+    }
+
+    /**
+     * @param getNumberOfPushupsCompletedRequest
+     * @return Result of the GetNumberOfPushupsCompleted operation returned by the service.
+     * @sample KneeBends.GetNumberOfPushupsCompleted
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T11:24:08Z/GetNumberOfPushupsCompleted"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetNumberOfPushupsCompletedResult getNumberOfPushupsCompleted(GetNumberOfPushupsCompletedRequest getNumberOfPushupsCompletedRequest) {
+        HttpResponseHandler<GetNumberOfPushupsCompletedResult> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetNumberOfPushupsCompletedResultJsonUnmarshaller());
+
+        HttpResponseHandler<SdkBaseException> errorResponseHandler = createErrorResponseHandler();
+
+        return clientHandler.execute(new ClientExecutionParams<GetNumberOfPushupsCompletedRequest, GetNumberOfPushupsCompletedResult>()
+                .withMarshaller(new GetNumberOfPushupsCompletedRequestProtocolMarshaller(protocolFactory)).withResponseHandler(responseHandler)
+                .withErrorResponseHandler(errorResponseHandler).withInput(getNumberOfPushupsCompletedRequest));
+    }
+
+    /**
      * @param postPushupDetectedRequest
      * @return Result of the PostPushupDetected operation returned by the service.
      * @sample KneeBends.PostPushupDetected
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/PostPushupDetected"
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T11:24:08Z/PostPushupDetected"
      *      target="_top">AWS API Documentation</a>
      */
     @Override
@@ -89,7 +127,7 @@ class KneeBendsClient implements KneeBends {
      * @param postStartExercisingRequest
      * @return Result of the PostStartExercising operation returned by the service.
      * @sample KneeBends.PostStartExercising
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/PostStartExercising"
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T11:24:08Z/PostStartExercising"
      *      target="_top">AWS API Documentation</a>
      */
     @Override

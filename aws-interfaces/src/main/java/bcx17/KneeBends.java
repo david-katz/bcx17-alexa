@@ -19,10 +19,28 @@ import bcx17.model.*;
 public interface KneeBends {
 
     /**
+     * @param deleteTrainingRequest
+     * @return Result of the DeleteTraining operation returned by the service.
+     * @sample KneeBends.DeleteTraining
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T11:24:08Z/DeleteTraining"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteTrainingResult deleteTraining(DeleteTrainingRequest deleteTrainingRequest);
+
+    /**
+     * @param getNumberOfPushupsCompletedRequest
+     * @return Result of the GetNumberOfPushupsCompleted operation returned by the service.
+     * @sample KneeBends.GetNumberOfPushupsCompleted
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T11:24:08Z/GetNumberOfPushupsCompleted"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetNumberOfPushupsCompletedResult getNumberOfPushupsCompleted(GetNumberOfPushupsCompletedRequest getNumberOfPushupsCompletedRequest);
+
+    /**
      * @param postPushupDetectedRequest
      * @return Result of the PostPushupDetected operation returned by the service.
      * @sample KneeBends.PostPushupDetected
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/PostPushupDetected"
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T11:24:08Z/PostPushupDetected"
      *      target="_top">AWS API Documentation</a>
      */
     PostPushupDetectedResult postPushupDetected(PostPushupDetectedRequest postPushupDetectedRequest);
@@ -31,7 +49,7 @@ public interface KneeBends {
      * @param postStartExercisingRequest
      * @return Result of the PostStartExercising operation returned by the service.
      * @sample KneeBends.PostStartExercising
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T08:57:52Z/PostStartExercising"
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T11:24:08Z/PostStartExercising"
      *      target="_top">AWS API Documentation</a>
      */
     PostStartExercisingResult postStartExercising(PostStartExercisingRequest postStartExercisingRequest);

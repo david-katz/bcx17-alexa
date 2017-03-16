@@ -8,11 +8,11 @@ import javax.annotation.Generated;
 
 /**
  * 
- * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T11:24:08Z/PostStartExercising"
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/efvp0jra7k-2017-03-16T11:24:08Z/DeleteTraining"
  *      target="_top">AWS API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class PostStartExercisingRequest extends com.amazonaws.opensdk.BaseRequest implements Serializable, Cloneable {
+public class DeleteTrainingRequest extends com.amazonaws.opensdk.BaseRequest implements Serializable, Cloneable {
 
     /**
      * Returns a string representation of this object; useful for testing and debugging.
@@ -36,9 +36,9 @@ public class PostStartExercisingRequest extends com.amazonaws.opensdk.BaseReques
         if (obj == null)
             return false;
 
-        if (obj instanceof PostStartExercisingRequest == false)
+        if (obj instanceof DeleteTrainingRequest == false)
             return false;
-        PostStartExercisingRequest other = (PostStartExercisingRequest) obj;
+        DeleteTrainingRequest other = (DeleteTrainingRequest) obj;
         return true;
     }
 
@@ -51,8 +51,8 @@ public class PostStartExercisingRequest extends com.amazonaws.opensdk.BaseReques
     }
 
     @Override
-    public PostStartExercisingRequest clone() {
-        return (PostStartExercisingRequest) super.clone();
+    public DeleteTrainingRequest clone() {
+        return (DeleteTrainingRequest) super.clone();
     }
 
     /**
@@ -62,7 +62,7 @@ public class PostStartExercisingRequest extends com.amazonaws.opensdk.BaseReques
      *        Request configuration.
      * @return This object for method chaining.
      */
-    public PostStartExercisingRequest sdkRequestConfig(com.amazonaws.opensdk.SdkRequestConfig sdkRequestConfig) {
+    public DeleteTrainingRequest sdkRequestConfig(com.amazonaws.opensdk.SdkRequestConfig sdkRequestConfig) {
         super.sdkRequestConfig(sdkRequestConfig);
         return this;
     }
